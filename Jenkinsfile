@@ -10,6 +10,7 @@ pipeline{
         }
         stage("Execute"){
             steps{
+                echo "Hello World"
                 echo "Executing java project"
                 sh "java JenkinsTest"
                 echo "Successfully excuted java project"
