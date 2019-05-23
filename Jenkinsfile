@@ -3,12 +3,16 @@ pipeline{
     stages {
         stage("Build"){
             steps {
-                javac JenkinsTest.java
+                echo "Building java project"
+                sh "javac JenkinsTest.java"
+                echo "Successfully build"
             }
         }
         stage("Execute"){
             steps{
-                java JenkinsTest
+                echo "Executing java project"
+                sh "java JenkinsTest"
+                echo "Successfully excuted java project"
             }
         }
     }
