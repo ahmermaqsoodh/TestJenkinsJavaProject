@@ -14,6 +14,7 @@ pipeline {
         message "Move to Test?"
         ok "Yes"
       } 
+      echo "jenkins"
     }
     stage('Execute') {
       steps {
