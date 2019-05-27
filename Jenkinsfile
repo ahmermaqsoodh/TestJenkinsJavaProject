@@ -10,7 +10,11 @@ pipeline {
     }
     stage('Execute approval'){
       script{
-        input "Execute program?"
+        input{
+          id "DeployTest"
+          message "Move to Test?"
+          ok "Yes"
+        }
       }
     }
     stage('Execute') {
