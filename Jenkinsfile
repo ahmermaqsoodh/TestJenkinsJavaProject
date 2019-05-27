@@ -8,6 +8,9 @@ pipeline {
         echo 'Successfully build'
       }
     }
+    stage('Execute approval'){
+      input "Execute program?"
+    }
     stage('Execute') {
       steps {
         echo "Hello World"
