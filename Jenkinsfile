@@ -9,7 +9,9 @@ pipeline {
       }
     }
     stage('Execute approval'){
-      input "Execute program?"
+      script{
+        input "Execute program?"
+      }
     }
     stage('Execute') {
       steps {
