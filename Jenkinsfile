@@ -8,14 +8,12 @@ pipeline {
         echo 'Successfully build'
       }
     }
-    stage('Execute approval'){
-      script{
-        input{
-          id "DeployTest"
-          message "Move to Test?"
-          ok "Yes"
-        }
-      }
+    stage('Execute approval'){ 
+      input{
+        id "DeployTest"
+        message "Move to Test?"
+        ok "Yes"
+      } 
     }
     stage('Execute') {
       steps {
